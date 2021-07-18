@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="ts:practiceModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+    <!-- Optional meta-data about the model -->
+    <description>Sample Document Model</description>
+    <author>Shreejeet</author>
+    <version>1.0</version>
+
+    <imports>
+        <!-- Import Alfresco Dictionary Definitions -->
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <!-- Import Alfresco Content Domain Model Definitions -->
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <!-- Import Alfresco System Model Definitions -->
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+    </imports>
+
+    <!-- Custom namespace for the ACME company -->
+    <namespaces>
+        <namespace uri="http://www.ts.org/content/practiceModel/1.0" prefix="ts"/>
+    </namespaces>
+
+
+    <!-- ===============================================================================================================
+        Constraints, Types, and Aspects go here...
+        -->
+
+    <types>
+        <!--
+            ACME Enterprise-wide Document root type.
+            All other custom document types would extend this one.
+        -->
+        <type name="ts:doc">
+            <title>Sample Document Type</title>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="ts:docId">
+                    <title>Document Identification Number</title>
+                    <type>d:text</type>
+                </property>
+            </properties>
+        </type>
+    </types>
+
+</model>
